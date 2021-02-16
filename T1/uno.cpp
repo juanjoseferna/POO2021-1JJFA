@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int calcularIVA ( int num1 ){
     num1 = num1 + ( num1 * 0.19 );
     return num1;
