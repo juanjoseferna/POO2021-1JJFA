@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 
 
@@ -11,8 +10,8 @@ int calcularIVA ( int num1 ){
 int main (){
     int precio_final;
     cout <<"Ingrese el precio del producto"<<endl;
-    scanf("%i", &precio_final);
+    cin >>precio_final;
     precio_final = calcularIVA( precio_final );
-    printf ("%i", precio_final);
+    cout <<precio_final<<endl;
     return 0;
 }
