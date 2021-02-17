@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int edadPersona() {
+int edadPersona(){
     int edad;
     cout << "Ingrese su edad: " << endl;
     cin >> edad;
