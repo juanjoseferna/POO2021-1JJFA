@@ -1,106 +1,70 @@
-#include <iostream>
-#include<cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-using namespace std;
+#define CAP 100
+
+typedef struct contacto contacto;
 
 struct contacto{
-    string nombre, apellido;
-    int telefono;
-    struct contacto *siguiente;
+   char name[ 20 ];
+   char lastname[ 20 ];
+   int numero;
 };
 
-typedef struct contacto *lista;
-
-void registrarPredefinidos ( lista &agenda ){
-    lista contacto1, contacto2, contacto3, recorrer;
-    contacto1->nombre = "Pepito";
-    contacto1->apellido = "Ramirez";
-    contacto1->telefono = 3216537467;
-    contacto1->siguiente = contacto2;
-    contacto2->nombre = "Santiago";
-    contacto2->apellido = "Cadena";
-    cout << "a" << endl;
-    contacto2->telefono = 3134156483;
-    contacto2->siguiente = contacto3;
-    contacto3->nombre = "Samantha";
-    contacto3->apellido = "Lopez";
-    contacto3->telefono = 3145166515;
-    contacto3->siguiente = NULL;
-    if ( agenda == NULL ){
-        agenda = contacto1;
-    } else {
-        recorrer = agenda;
-        while( recorrer->siguiente == NULL ){
-            recorrer = recorrer->siguiente;
-        }
-        recorrer->siguiente = contacto1;
-    }
-    return;
+void menu(){
+   printf( "AGENDA\n"
+           "=========\n"
+           "1. add\n"
+           "2. report\n"
+           "3. list\n"
+           "0. exit\n"
+           "opc: " );
+   return;
 }
 
-void registrarNuevo ( lista &agenda ){
-    lista contacto, recorrer;
-    cout << "Ingrese el nombre: " << endl;
-    cin.getline(contacto->nombre,40);
-    cout << "Ingrese el apellido: " << endl;
-    cin >> contacto->apellido;
-    cout << "Ingrese el numero" << endl;
-    cin >> contacto->telefono;
-    contacto->siguiente = NULL;
-    if ( agenda == NULL ){
-        agenda = contacto;
-    } else {
-        recorrer = agenda;
-        while( recorrer->siguiente == NULL ){
-            recorrer = recorrer->siguiente;
-        }
-        recorrer->siguiente = contacto;
-    }
-    return;
-}
-
-void imprimirAgenda( lista &agenda ){
-    lista imprimir = agenda;
-    int salida, indice = 1;
-    if ( imprimir == NULL ){
-        cout << "Lista vacia" << endl;
-        return;
-    }
-    while( salida == 0 ){
-        if( imprimir == NULL ){
-            salida = 1;
-        } else {
-            cout << "Contacto #" << indice <<endl;
-            cout << "Nombre: " << imprimir->nombre << endl;
-            cout << "Apellido: " << imprimir->apellido << endl;
-            cout << "Numero: " << imprimir->telefono << endl;
-            imprimir = imprimir->siguiente;
-            indice++;
-        }
-    }
-    
-}
-
-int main(){
-    int salida = 0, opc;
-    lista agenda = NULL;
-    registrarPredefinidos( agenda );
-    while( salida == 0 ){
-        cout << "Ingrese una opcion \n 1. Crear agenda con contactos predefinidos\n 2. Agregar contacto\n 3. Ver lista de contactos\n 0. Para salir"<< endl;
-        cin >> opc;
-        switch (opc){
-            case 1:{
-                registrarPredefinidos( agenda );
-                break;
+int main( int argc, char * argv[] ){
+   FILE *f;
+   contacto agenda[ CAP ], temp;
+   int opc, n = 0, i, found,  j, val, total;
+   int numero;
+   char name[ 10 ];
+   do{
+      menu();
+      scanf( "%d", &opc );
+      switch( opc ){
+         case 1:
+            printf( "name= " ); scanf( "%s", agenda[ n ].name );
+            printf( "lastname= " ); scanf( "%s", agenda[ n ].lastname );
+            printf( "numero= " ); scanf( "%d", &agenda[ n ].numero );
+            n++;
+            break;
+         case 2:
+            for( i = 0; i < n; i++ )
+               for( j = 0; j < n - 1; j++ )
+                  if( agenda[ j ].numero > agenda[ j + 1 ].numero ){
+                     temp = agenda[ j ];
+                     agenda[ j ] = agenda[ j + 1 ];
+                     agenda[ j + 1 ] = temp;
+                  }
+            f = fopen( "reporte.txt", "w" );
+            fprintf( f, "DIRECTORIO\n" );
+            for( i = 0; i < n; i++ ){
+               fprintf( f, "%s - ", agenda[ i ].name);
+               fprintf( f, "%s - ", agenda[ i ].lastname);
+               fprintf( f, "%i", agenda[ i ].numero );
+               fprintf( f, "\n");
             }
-            case 2:{
-                registrarNuevo( agenda );
-                break;
-            }
-            case 3:{
-                imprimirAgenda( agenda );
-                break;
-            }
-        }
-    } 
+            fprintf( f, "\n" );
+            fclose( f );
+            system( "notepad reporte.txt" );
+            break;
+         case 3:
+            for( i = 0; i < n; i++ )
+               printf( "(%s, %s, %i) ", agenda[ i ].name,agenda[ i ].lastname, agenda[ i ].numero );
+            printf( "\n" );
+            break;
+      }
+   }while( opc != 0 );
+   return 0;
 }
+
