@@ -14,9 +14,10 @@ struct contacto{
 void menu(){
    printf( "AGENDA\n"
            "=========\n"
-           "1. add\n"
-           "2. report\n"
-           "3. list\n"
+           "1. agregar contacto\n"
+           "2. reporte\n"
+           "3. lista\n"
+           "4. contactos predefinidos \n"
            "0. exit\n"
            "opc: " );
    return;
@@ -25,9 +26,7 @@ void menu(){
 int main( int argc, char * argv[] ){
    FILE *f;
    contacto agenda[ CAP ], temp;
-   int opc, n = 0, i, found,  j, val, total;
-   int numero;
-   char name[ 10 ];
+   int opc, n = 0, i,  j;
    do{
       menu();
       scanf( "%d", &opc );
@@ -60,11 +59,27 @@ int main( int argc, char * argv[] ){
             break;
          case 3:
             for( i = 0; i < n; i++ )
-               printf( "(%s, %s, %i) ", agenda[ i ].name,agenda[ i ].lastname, agenda[ i ].numero );
+               printf( "Nombre : %s %s Numero: %i\n", agenda[ i ].name,agenda[ i ].lastname, agenda[ i ].numero );
             printf( "\n" );
             break;
+         case 4:
+            strcpy(agenda[ n ].name, "Alberto");
+            strcpy(agenda[ n ].lastname, "Lopez");
+            agenda[ n ].numero = 227556;
+            n++;
+            strcpy(agenda[ n ].name, "Camila");
+            strcpy(agenda[ n ].lastname, "Perez");
+            agenda[ n ].numero = 275175;
+            n++;
+            strcpy(agenda[ n ].name, "Mariana");
+            strcpy(agenda[ n ].lastname, "Caicedo");
+            agenda[ n ].numero = 213267;
+            n++;
+            strcpy(agenda[ n ].name, "Policia");
+            strcpy(agenda[ n ].lastname, "Nacional");
+            agenda[ n ].numero = 123;
+            n++;
       }
    }while( opc != 0 );
    return 0;
 }
-
