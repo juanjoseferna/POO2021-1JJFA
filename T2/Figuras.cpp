@@ -158,7 +158,7 @@ int main (){
         opc = menu();
         switch (opc){
             case 1:
-                if ( totalCir  < 10 ){
+                if ( totalCir  < CAP ){
                     float radio;
                     std::cout << "Ingrese un radio para el Circulo " << totalCir + 1 << ": ";
                     std::cin >> radio;
@@ -174,7 +174,7 @@ int main (){
                 }
                 break;
             case 2:
-                if ( totalCir  < 10 ){
+                if ( totalCir  < CAP ){
                     float largo, ancho;
                     std::cout << "Ingrese el largo para el Rectangulo " << totalRec + 1 << ": ";
                     std::cin >> largo;
@@ -193,7 +193,7 @@ int main (){
                 }
                 break;
             case 3:
-                if ( totalTri  < 10 ){
+                if ( totalTri  < CAP ){
                     float ladoA, ladoB, base, altura;
                     std::cout << "Ingrese el lado A para el Triangulo " << totalTri + 1 << ": ";
                     std::cin >> ladoA;
