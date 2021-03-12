@@ -7,5 +7,5 @@ triangulo: Triangulo.cpp Triangulo.h
 		g++ -c Triangulo.cpp
 circulo: Circulo.cpp Circulo.h
 		g++ -c Circulo.cpp
-main: Main.cpp Rectangulo.h
+main: Main.cpp Rectangulo.h Triangulo.h Circulo.h
 		g++ -c Main.cpp
