@@ -1,15 +1,18 @@
-//#ifndef PERSONA_H
-//#define PERSONA_H
+#ifndef PERSONA_H
+#define PERSONA_H
 #include <iostream>
 
-class Persona{ //nombre, identificación, email, celular, etc (datos básicos)
+using std::string;
+
+class Persona{
 	private:
-		std::string nombre;
-		int CC, celular;
-		std::string email;
+		string nombre, email, rol;
+		int cedula, telefono;
 	public:
-		Jurado();
-		void editarNota();
+		Persona();
+		void crearPersona();
+		void verPersona();
+		void editarPersona();
 };
 
-//#endif /* !PERSONA_H */
+#endif /* !PERSONA_sH */

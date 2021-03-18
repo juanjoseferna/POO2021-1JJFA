@@ -1,14 +1,35 @@
-//#ifndef ACTA_H
-//#define ACTA_H
+#ifndef ACTA_H
+#define ACTA_H
 #include <iostream>
+#include <list>
+#include "Persona.h"
+#include "Calificacion.h"
+
+using std::string;
+using std::list;
+using std::cout;
+using std::cin;
+using std::endl;
 
 class Acta{
 	private:
-		int ID;
-		std::string Fecha, Nombre, Estado, Periodo;
-		Jurado jurado1, jurado2;
+		string nombreTrabajo, estado, tipoTrabajo, fecha;
+		int idActa;
+		list<Calificacion> Calificaciones;
+		float notaFinal;
+		Persona jurado1, jurado2, director, codirector, autor;
 	public:
 		Acta();
+		void crearActa(int);
+		void cerrarActa();
+		void setJurado1();
+		void setJurado2();
+		void setDirector();
+		void setCodirector();
+		void imprimirActa();
+		int getId();
+		void calcularNotaFinal();
+		void editarActa();
 };
 
-//#endif /* !ACTA_H */
+#endif /* !ACTA_H */
