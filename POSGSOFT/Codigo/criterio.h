@@ -9,12 +9,13 @@ using std::endl;
 
 class Criterio{
 	private:
-		int id = -1;
+		int id;
 		float porcentaje;
 		string descripcion;
 	public:
 		Criterio();
         void crearCriterio(int);
+        void mostrarCriterio();
 };
 
 #endif /* !CRITERIO_H */

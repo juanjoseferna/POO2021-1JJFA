@@ -14,6 +14,7 @@ int menu(){
 } 
 
 int main(){
-	int opc = menu();
+	Registro actas;
+	actas.agregarActa();
 	return 0;
 }

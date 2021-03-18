@@ -8,7 +8,9 @@ void Acta::crearActa(int idActa){
     Persona jurado1, jurado2, autor, director,codirector;
     this->idActa = idActa;
     cout << "Ingrese el nombre del trabajo" << endl;
+    fflush(stdin);
     getline(cin, nombreTrabajo);
+    fflush(stdin);
     estado = "Abierta";
     cout << "Ingrese el tipo del trabajo" << endl;
     cout << " 1. Investigacion" << endl;
@@ -25,19 +27,25 @@ void Acta::crearActa(int idActa){
     } while(salida == 0);
     salida = 0;
     cout << "Ingrese la fecha " << endl;
+    fflush(stdin);
     getline(cin, fecha);
-    cout << "Ingrese los datos del primer autor" << endl;
+    fflush(stdin);
+    cout << "Ingrese los datos del autor" << endl;
     autor.crearPersona();
     this->autor = autor;
+    fflush(stdin);
     cout << "Ingrese los datos del primer jurado" << endl;
     jurado1.crearPersona();
     this->jurado1 = jurado1;
+    fflush(stdin);
     cout << "Ingrese los datos del segundo jurado" << endl;
     jurado2.crearPersona();
     this->jurado2 = jurado2;
+    fflush(stdin);
     cout << "Ingrese los datos del director" << endl;
     director.crearPersona();
     this->director = director;
+    fflush(stdin);
     cout << "¿Existe codirector?" <<endl;
     cout << " 1. Si" << endl;
     cout << " 2. No" << endl;
@@ -47,10 +55,12 @@ void Acta::crearActa(int idActa){
             cout << "Ingrese los datos del codirector" << endl;
             director.crearPersona();
             this->codirector = codirector;
+            fflush(stdin);
             salida = 1;
         } else if (opc == 2){
             cout << "Listo!" << endl;
             salida = 1;
         }
     } while(salida == 0);
+    return;
 }

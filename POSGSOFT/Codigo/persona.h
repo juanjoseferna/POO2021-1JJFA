@@ -3,6 +3,9 @@
 #include <iostream>
 
 using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
 
 class Persona{
 	private:
@@ -15,4 +18,4 @@ class Persona{
 		void editarPersona();
 };
 
-#endif /* !PERSONA_sH */
+#endif /* !PERSONA_H */

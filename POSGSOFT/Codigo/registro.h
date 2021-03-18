@@ -3,17 +3,20 @@
 #include <iostream>
 #include <list>
 #include "acta.h"
+#include "persona.h"
 
 using std::string;
-using std::list;
+using std::cin;
+using std::cout;
+using std::endl;
 
 class Registro{
 	private:
-		list<Acta> Actas;
+		list<Acta> actas;
 	public:
 		Registro();
-		void verPersona();
-		void editarPersona();
+		void agregarActa();
+		void borrarActa();
 };
 
 #endif /* !REGISTRO_H */

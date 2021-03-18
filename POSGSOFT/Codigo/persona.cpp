@@ -1,24 +1,24 @@
 #include <iostream>
 #include "persona.h"
 
-using std::cout;
-using std::cin;
-using std::endl;
-
 Persona::Persona(){
 }
 
 void Persona::crearPersona(){
-     int opc;
-    cout << " Digite su nombre: " << endl;
+    int opc;
+    cout << " Digite el nombre: " << endl;
+    fflush(stdin);
     getline(cin, nombre);
-    cout << " Digite su email: " << endl;
+    fflush(stdin);
+    cout << " Digite el email: " << endl;
+    fflush(stdin);
     getline(cin, email);
-    cout << " Digite su CC: " << endl;
+    fflush(stdin);
+    cout << " Digite el CC: " << endl;
     cin >> cedula;
-    cout << " Digite su telefono (7 digitos max): " << endl;
+    cout << " Digite el telefono: " << endl;
     cin >> telefono;
-    cout << " Digite su rol: \n 1. Director\n 2. Codirector\n 3. Jurado Interno\n 4 Jurado Externo\n" << endl;
+    cout << " Digite el rol: \n 1. Director\n 2. Codirector\n 3. Jurado Interno\n 4. Jurado Externo" << endl;
     cin >> opc;
     if(opc == 1){
         rol = "Director";
@@ -31,4 +31,5 @@ void Persona::crearPersona(){
     } else if (opc == 5){
         rol = "Estudiante";
     }
+    
 }
