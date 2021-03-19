@@ -1,9 +1,10 @@
 #include <iostream>
 #include "acta.h"
 
-Acta::Acta (){}
+Acta::Acta (){//Constructor vacio de Acta
+}
 
-void Acta::crearActa(int idActa){
+void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
     int opc, salida;
     Persona jurado1, jurado2, autor, director,codirector;
     this->idActa = idActa;
@@ -16,34 +17,34 @@ void Acta::crearActa(int idActa){
     cout << " 1. Investigacion" << endl;
     cout << " 2. Aplicado" << endl;
     cin >> opc;
-    do{
-        if (opc == 1){
+    tipoProyecto var = tipoProyecto::INVESTIGACION;
+    switch(var){
+        case tipoProyecto::INVESTIGACION :
             tipoTrabajo = "Investigacion";
-            salida = 1;
-        } else if (opc == 2){
+            break;
+        case tipoProyecto::APLICADO :
             tipoTrabajo = "Aplicado";
-            salida = 1;
-        }
-    } while(salida == 0);
+            break;
+    }
     salida = 0;
     cout << "Ingrese la fecha " << endl;
     fflush(stdin);
     getline(cin, fecha);
     fflush(stdin);
     cout << "Ingrese los datos del autor" << endl;
-    autor.crearPersona();
+    autor.crearPersona(4);
     this->autor = autor;
     fflush(stdin);
     cout << "Ingrese los datos del primer jurado" << endl;
-    jurado1.crearPersona();
+    jurado1.crearPersona(3);
     this->jurado1 = jurado1;
     fflush(stdin);
     cout << "Ingrese los datos del segundo jurado" << endl;
-    jurado2.crearPersona();
+    jurado2.crearPersona(3);
     this->jurado2 = jurado2;
     fflush(stdin);
     cout << "Ingrese los datos del director" << endl;
-    director.crearPersona();
+    director.crearPersona(1);
     this->director = director;
     fflush(stdin);
     cout << "¿Existe codirector?" <<endl;
@@ -53,7 +54,7 @@ void Acta::crearActa(int idActa){
     do{
         if (opc == 1){
             cout << "Ingrese los datos del codirector" << endl;
-            director.crearPersona();
+            director.crearPersona(2);
             this->codirector = codirector;
             fflush(stdin);
             salida = 1;

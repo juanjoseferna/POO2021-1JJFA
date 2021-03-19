@@ -1,11 +1,11 @@
 #include <iostream>
 #include "persona.h"
 
-Persona::Persona(){
+Persona::Persona(){ //Constructor vacio de persona
 }
 
-void Persona::crearPersona(){
-    int opc;
+void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
+    int opc, salida=1;
     cout << " Digite el nombre: " << endl;
     fflush(stdin);
     getline(cin, nombre);
@@ -18,18 +18,33 @@ void Persona::crearPersona(){
     cin >> cedula;
     cout << " Digite el telefono: " << endl;
     cin >> telefono;
-    cout << " Digite el rol: \n 1. Director\n 2. Codirector\n 3. Jurado Interno\n 4. Jurado Externo" << endl;
-    cin >> opc;
-    if(opc == 1){
+    if(opcion1 == 1){
         rol = "Director";
-    } else if (opc == 2){
+    } else if (opcion1 == 2){
         rol = "Codirector";
-    } else if (opc == 3){
-        rol = " JuradoInterno";
-    } else if (opc == 4){
-        rol = " JuradoExterno";
-    } else if (opc == 5){
+    } 
+    do{
+        if (opcion1 == 3){
+            cout << " 1. Jurado Interno" << endl;
+            cout << " 2. Jurado Externo" <<endl;
+            cin >> opc;
+            if (opc == 1){
+                rol = " JuradoInterno";
+                salida = 0;
+            } else if (opc == 2){
+                rol = " JuradoExterno";
+                salida = 0;
+        }
+    } while(salida == 1);
+    if (opcion1 == 4){
         rol = "Estudiante";
-    }
-    
+    } 
+    return;
+}
+
+void verPersona(){
+    cout << " Nombre y cargo: " << nombre << " - " << rol << endl;
+    cout << " Email y telefono: " << email << " - " << telefono << endl;
+    cout << " CC: " << cedula << endl;
+    return;
 }

@@ -13,9 +13,8 @@ class Persona{
 		int cedula, telefono;
 	public:
 		Persona();
-		void crearPersona();
+		void crearPersona(int);
 		void verPersona();
-		void editarPersona();
 };
 
 #endif /* !PERSONA_H */
