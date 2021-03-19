@@ -11,7 +11,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-enum class TipoProyecto{
+enum class tipoProyecto{
     INVESTIGACION,
     APLICADO
 };
@@ -21,8 +21,9 @@ class Acta{
 		string nombreTrabajo, estado, tipoTrabajo, fecha;
 		int idActa;
 		list<Calificacion> Calificaciones;
-		float notaFinal;
+		float notaFinal = -1;
 		Persona jurado1, jurado2, director, codirector, autor;
+    bool codirectorEstado = false;
 	public:
 		Acta();
 		void crearActa(int);

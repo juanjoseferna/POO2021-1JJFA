@@ -22,7 +22,7 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
         rol = "Director";
     } else if (opcion1 == 2){
         rol = "Codirector";
-    } 
+    }
     do{
         if (opcion1 == 3){
             cout << " 1. Jurado Interno" << endl;
@@ -34,15 +34,16 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
             } else if (opc == 2){
                 rol = " JuradoExterno";
                 salida = 0;
-        }
+            }
+          }
     } while(salida == 1);
     if (opcion1 == 4){
         rol = "Estudiante";
-    } 
+    }
     return;
 }
 
-void verPersona(){
+void Persona::verPersona(){
     cout << " Nombre y cargo: " << nombre << " - " << rol << endl;
     cout << " Email y telefono: " << email << " - " << telefono << endl;
     cout << " CC: " << cedula << endl;
