@@ -15,6 +15,11 @@ class Persona{
 		Persona();
 		void crearPersona(int);
 		void verPersona();
+		string getNombre();
+		string getEmail();
+		string getRol();
+		int getCedula();
+		int getTelefono();
 };
 
 #endif /* !PERSONA_H */
