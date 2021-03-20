@@ -28,6 +28,22 @@ float Calificacion::getNotaJ2(){
 	return notaj2;
 }
 
+string Calificacion::getComentarioJ1(){
+	return comentarioj1;
+}
+
+string Calificacion::getComentarioJ2(){
+	return comentarioj2;
+}
+
+string Calificacion::getDescripcionCriterio(){
+	return criterio.getDescripcion();
+}
+
+int Calificacion::getIdCriterio(){
+	return criterio.getId();
+}
+
 float Calificacion::getPorcentajeNota(){
 	return criterio.getPorcentaje();
 }

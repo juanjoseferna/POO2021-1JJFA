@@ -15,7 +15,7 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
     getline(cin, email);
     fflush(stdin);
     cout << " Digite el codigo de identificacion (5 digitos): " << endl;
-    cin >> cedula;
+    cin >> codigo;
     cout << " Digite el telefono: " << endl;
     cin >> telefono;
     if(opcion1 == 1){
@@ -54,8 +54,8 @@ string Persona::getRol(){
     return rol;
 }
 
-int Persona::getCedula(){
-    return cedula;
+int Persona::getCodigo(){
+    return codigo;
 }
 
 int Persona::getTelefono(){
@@ -65,6 +65,6 @@ int Persona::getTelefono(){
 void Persona::verPersona(){
     cout << " Nombre y cargo: " << nombre << " - " << rol << endl;
     cout << " Email y telefono: " << email << " - " << telefono << endl;
-    cout << " CC: " << cedula << endl;
+    cout << " CC: " << codigo << endl;
     return;
 }

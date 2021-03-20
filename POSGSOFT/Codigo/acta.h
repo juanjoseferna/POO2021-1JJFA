@@ -20,23 +20,29 @@ enum class tipoProyecto{
 
 class Acta{
 	private:
-		string nombreTrabajo, estado, tipoTrabajo, fecha;
-		int idActa;
+		string nombreTrabajo, estado, tipoTrabajo, fecha, estadoTrabajo;
+		int idActa, numeroTotalCriterios = 8;
 		list<Calificacion> CalificacionesJurados;
 		float notaFinal = -1;
 		Persona jurado1, jurado2, director, codirector, autor;
     	bool codirectorEstado = false;
 	public:
 		Acta();
+		int getId();
+		string getEstado();
+		string getTipoTrabajo();
+		string getNombreActa();
+		int getCodigoJurado1();
+		int getCodigoJurado2();
+		int getCodigoDirector();
 		void crearActa(int);
 		void cerrarActa();
 		void imprimirActa();
-		int getId();
-		string getEstado();
 		void calcularNotaFinal();
 		void agregarCalificaciones();
 		void crearArchivoTXT();
 		void crearArchivoTXTPersona(Persona);
+		void agregarComentarioExtra();
 };
 
 #endif /* !ACTA_H */

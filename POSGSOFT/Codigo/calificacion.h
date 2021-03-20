@@ -18,6 +18,10 @@ class Calificacion{
 		Calificacion();
 		float getNotaJ1();
 		float getNotaJ2();
+		string getComentarioJ1();
+		string getComentarioJ2();
+		string getDescripcionCriterio();
+		int getIdCriterio();
 		float getPorcentajeNota();
 		void crearCalificacion(int);
 		void mostrarCalificacion();

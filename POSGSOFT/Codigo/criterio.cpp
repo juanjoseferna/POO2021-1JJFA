@@ -19,6 +19,14 @@ float Criterio::getPorcentaje(){
     return porcentaje;
 }
 
+string Criterio::getDescripcion(){
+    return descripcion;
+}
+
+int Criterio::getId(){
+    return id;
+}
+
 void Criterio::mostrarCriterio(){
 	cout << " ID: " << id << endl;
 	cout << " Peso en la nota final (total = 1): " << porcentaje << endl;

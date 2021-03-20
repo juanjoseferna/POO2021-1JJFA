@@ -13,6 +13,8 @@ int menu(){
     cout << " 3. Para ver todas las actas" << endl;
     cout << " 4. editar el acta (agregar calificaciones, cambiar estado,etc)" << endl;
     cout << " 5. Para crear un archivo txt" << endl;
+    cout << " 6. Para ver datos sobre las actas" << endl;
+    cout << " 0. Para salir" << endl;
     cin >> opcion;
     return opcion;
 } 
@@ -37,6 +39,8 @@ int main(){
 				break;
 			case 5:
 				actas.crearArchivoTxt();
+				break;
+			case 6:
 				break;
 		}
 	} while(opcion != 0);

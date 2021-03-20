@@ -20,6 +20,7 @@ class Registro{
 		void editarActa();
 		void imprimirActas();
 		void crearArchivoTxt();
+		void datosPosgrado();
 };
 
 #endif /* !REGISTRO_H */

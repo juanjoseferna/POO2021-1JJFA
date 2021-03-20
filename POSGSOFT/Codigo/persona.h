@@ -10,7 +10,7 @@ using std::endl;
 class Persona{
 	private:
 		string nombre, email, rol;
-		int cedula, telefono;
+		int codigo, telefono;
 	public:
 		Persona();
 		void crearPersona(int);
@@ -18,7 +18,7 @@ class Persona{
 		string getNombre();
 		string getEmail();
 		string getRol();
-		int getCedula();
+		int getCodigo();
 		int getTelefono();
 };
 
