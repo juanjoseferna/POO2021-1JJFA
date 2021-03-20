@@ -22,9 +22,11 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
         rol = "Director";
     } else if (opcion1 == 2){
         rol = "Codirector";
+    }else if (opcion1 == 4){
+        rol = "Estudiante";
     }
-    do{
-        if (opcion1 == 3){
+    else if (opcion1 == 3){
+        do{
             cout << " 1. Jurado Interno" << endl;
             cout << " 2. Jurado Externo" <<endl;
             cin >> opc;
@@ -35,11 +37,8 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
                 rol = " JuradoExterno";
                 salida = 0;
             }
-          }
-    } while(salida == 1);
-    if (opcion1 == 4){
-        rol = "Estudiante";
-    }
+        }while(salida == 1);
+      }
     return;
 }
 

@@ -32,16 +32,12 @@ void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
     fflush(stdin);
     cout << "Ingrese los datos del autor" << endl;
     autor.crearPersona(4);
-    fflush(stdin);
     cout << "Ingrese los datos del primer jurado" << endl;
     jurado1.crearPersona(3);
-    fflush(stdin);
     cout << "Ingrese los datos del segundo jurado" << endl;
     jurado2.crearPersona(3);
-    fflush(stdin);
     cout << "Ingrese los datos del director" << endl;
     director.crearPersona(1);
-    fflush(stdin);
     cout << "¿Existe codirector?" <<endl;
     cout << " 1. Si" << endl;
     cout << " 2. No" << endl;
@@ -51,7 +47,6 @@ void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
             cout << "Ingrese los datos del codirector" << endl;
             director.crearPersona(2);
             codirectorEstado = true;
-            fflush(stdin);
             salida = 1;
         } else if (opc == 2){
             cout << "Listo!" << endl;
@@ -87,4 +82,31 @@ void Acta::imprimirActa(){
 
 int Acta::getId(){
     return idActa;
+}
+
+void Acta::agregarCalificaciones(){
+    Calificacion calificacion;
+    if (CalificacionesJurados.size() == 8){
+        cout << "Ya hay suficientes calificaciones!!" << endl;
+        return;
+    }
+    while(CalificacionesJurados.size() < 8){
+        calificacion.crearCalificacion(CalificacionesJurados.size());
+        CalificacionesJurados.push_back(calificacion);
+    }
+    return;
+}
+
+void Acta::calcularNotaFinal(){
+    float notaFinal = 0, porcentaje;
+    if (CalificacionesJurados.size() < 8){
+        cout << "No hay suficientes calificaciones!!" << endl;
+        return;
+    }
+    for(list<Calificacion>::iterator calificacion = CalificacionesJurados.begin();calificacion!=CalificacionesJurados.end();calificacion++){
+        porcentaje = calificacion->getPorcentajeNota();
+        notaFinal = notaFinal + (((calificacion->getNotaJ1() * porcentaje) + (calificacion->getNotaJ2() * porcentaje))/2);
+    }
+    cout << "La nota final es de:" << notaFinal << endl;
+    return;
 }

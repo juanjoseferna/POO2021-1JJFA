@@ -11,13 +11,17 @@ void Criterio::crearCriterio(int id){
     fflush(stdin);
     cout << "Ingrese el porcentaje del criterio" << endl;
     cin >> porcentaje;
-    porcentaje = porcentaje;
+    porcentaje = porcentaje / 100;
     return;
+}
+
+float Criterio::getPorcentaje(){
+    return porcentaje;
 }
 
 void Criterio::mostrarCriterio(){
 	cout << " ID: " << id << endl;
-	cout << " Porcentaje: " << porcentaje << "%" << endl;
+	cout << " Peso en la nota final (total = 1): " << porcentaje << endl;
 	cout << " Descripcion : " << descripcion << endl;
 	return;
 }

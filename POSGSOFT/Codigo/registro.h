@@ -17,6 +17,8 @@ class Registro{
 		Registro();
 		void agregarActa();
 		void borrarActa();
+		void editarActa();
+		void imprimirActas();
 };
 
 #endif /* !REGISTRO_H */

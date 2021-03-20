@@ -16,6 +16,7 @@ class Criterio{
 		Criterio();
         void crearCriterio(int);
         void mostrarCriterio();
+        float getPorcentaje();
 };
 
 #endif /* !CRITERIO_H */

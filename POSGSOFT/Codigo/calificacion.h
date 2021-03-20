@@ -11,13 +11,15 @@ using std::endl;
 
 class Calificacion{
 	private:
-		float nota;
+		float notaj1, notaj2;
 		Criterio criterio;
-		string comentario;
+		string comentarioj1, comentarioj2;
 	public:
 		Calificacion();
-		void setCriterio(Criterio);
-		void crearCalificacion();
+		float getNotaJ1();
+		float getNotaJ2();
+		float getPorcentajeNota();
+		void crearCalificacion(int);
 		void mostrarCalificacion();
 };
 

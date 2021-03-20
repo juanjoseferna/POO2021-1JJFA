@@ -20,7 +20,7 @@ class Acta{
 	private:
 		string nombreTrabajo, estado, tipoTrabajo, fecha;
 		int idActa;
-		list<Calificacion> Calificaciones;
+		list<Calificacion> CalificacionesJurados;
 		float notaFinal = -1;
 		Persona jurado1, jurado2, director, codirector, autor;
     bool codirectorEstado = false;
@@ -28,14 +28,10 @@ class Acta{
 		Acta();
 		void crearActa(int);
 		void cerrarActa();
-		void setJurado1();
-		void setJurado2();
-		void setDirector();
-		void setCodirector();
 		void imprimirActa();
 		int getId();
 		void calcularNotaFinal();
-		void editarActa();
+		void agregarCalificaciones();
 };
 
 #endif /* !ACTA_H */
