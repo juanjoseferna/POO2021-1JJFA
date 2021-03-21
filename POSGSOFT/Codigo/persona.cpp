@@ -4,7 +4,7 @@
 Persona::Persona(){ //Constructor vacio de persona
 }
 
-void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
+void Persona::crearPersona(int opcion1){ //Rellena de datos para persona
     int opc, salida=1;
     cout << " Digite el nombre: " << endl;
     fflush(stdin);
@@ -31,10 +31,10 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
             cout << " 2. Jurado Externo" <<endl;
             cin >> opc;
             if (opc == 1){
-                rol = " JuradoInterno";
+                rol = "JuradoInterno";
                 salida = 0;
             } else if (opc == 2){
-                rol = " JuradoExterno";
+                rol = "JuradoExterno";
                 salida = 0;
             }
         }while(salida == 1);
@@ -42,29 +42,29 @@ void Persona::crearPersona(int opcion1){ //Relleno de datos para persona
     return;
 }
 
-string Persona::getNombre(){
+string Persona::getNombre(){//retorna el nombre de la persona
     return nombre;
 }
 
-string Persona::getEmail(){
+string Persona::getEmail(){//retorna el email de la persona
     return email;
 }
 
-string Persona::getRol(){
+string Persona::getRol(){//retorna el rol de la persona
     return rol;
 }
 
-int Persona::getCodigo(){
+int Persona::getCodigo(){//retorna el codigo de la persona
     return codigo;
 }
 
-int Persona::getTelefono(){
+int Persona::getTelefono(){//retorna el telefono de la persona
     return telefono;
 }
 
-void Persona::verPersona(){
+void Persona::verPersona(){//Imprime la informacion de la persona
     cout << " Nombre y cargo: " << nombre << " - " << rol << endl;
     cout << " Email y telefono: " << email << " - " << telefono << endl;
-    cout << " CC: " << codigo << endl;
+    cout << " CI: " << codigo << endl; //CI significa codigo de identificacion
     return;
 }

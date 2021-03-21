@@ -13,14 +13,9 @@ using std::cin;
 using std::endl;
 using std::ofstream;
 
-enum class tipoProyecto{
-    INVESTIGACION,
-    APLICADO
-};
-
 class Acta{
 	private:
-		string nombreTrabajo, estado, tipoTrabajo, fecha, estadoTrabajo;
+		string nombreTrabajo, estado, tipoTrabajo, fecha, estadoTrabajo, observacionAdicionalJ1, observacionAdicionalJ2;
 		int idActa, numeroTotalCriterios = 8;
 		list<Calificacion> CalificacionesJurados;
 		float notaFinal = -1;
@@ -29,9 +24,15 @@ class Acta{
 	public:
 		Acta();
 		int getId();
+		int getNumeroTotalCriterios();
 		string getEstado();
+		string getEstadoTrabajo();
 		string getTipoTrabajo();
 		string getNombreActa();
+		string getNombreJurado1();
+		string getNombreJurado2();
+		string getTipoJurado1();
+		string getTipoJurado2();
 		int getCodigoJurado1();
 		int getCodigoJurado2();
 		int getCodigoDirector();

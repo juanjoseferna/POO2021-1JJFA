@@ -6,8 +6,9 @@
 #include "persona.h"
 
 using std::string;
-using std::cin;
+using std::list;
 using std::cout;
+using std::cin;
 using std::endl;
 
 class Registro{

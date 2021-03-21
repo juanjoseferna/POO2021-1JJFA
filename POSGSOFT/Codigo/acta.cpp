@@ -57,23 +57,39 @@ void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
     return;
 }
 
-int Acta::getCodigoJurado1(){
+int Acta::getCodigoJurado1(){//retorna el codigo del jurado1
     return jurado1.getCodigo();
 }
 
-int Acta::getCodigoJurado2(){
+int Acta::getCodigoJurado2(){//retorna el codigo del jurado2
     return jurado2.getCodigo();
 }
 
-int Acta::getCodigoDirector(){
+int Acta::getCodigoDirector(){//retorna el codigo del director
     return director.getCodigo();
 }
 
-string Acta::getNombreActa(){
+string Acta::getNombreActa(){//retorna el nombre del trabajo
     return nombreTrabajo;
 }
 
-void Acta::imprimirActa(){
+string Acta::getNombreJurado1(){//retorna el nombre del jurado1
+    return jurado2.getNombre();
+}
+
+string Acta::getNombreJurado2(){//retorna el nombre del jurado2
+    return jurado1.getNombre();
+}
+
+string Acta::getTipoJurado1(){//retorna el tipo de jurado1
+    return jurado1.getRol();
+}
+
+string Acta::getTipoJurado2(){//retorna el tipo de jurado2
+    return jurado2.getRol();
+}
+
+void Acta::imprimirActa(){//imprime el acta
     cout << " Nombre del trabajo - ID: " << nombreTrabajo << " - " << idActa << endl;
     cout << " Estado: " << estado << endl;
     cout << " Fecha: " << fecha << endl;
@@ -88,19 +104,27 @@ void Acta::imprimirActa(){
     return;
 }
 
-int Acta::getId(){
+int Acta::getId(){//retorna el id del acta
     return idActa;
 }
 
-string Acta::getEstado(){
+int Acta::getNumeroTotalCriterios(){//retorna el total de criterios
+    return numeroTotalCriterios;
+}
+
+string Acta::getEstado(){//retorna si el acta esta abierta o cerrada
     return estado;
 }
 
-string Acta::getTipoTrabajo(){
+string Acta::getEstadoTrabajo(){//retorna el estado del trabajo del acta pendiente, rechazada o aceptada
+    return estadoTrabajo;
+}
+
+string Acta::getTipoTrabajo(){//retorna si el tipo de trabajo es de investigacion o aplicado
     return tipoTrabajo;
 }
 
-void Acta::agregarCalificaciones(){
+void Acta::agregarCalificaciones(){//rellena las calificaciones
     int opc;
     if (estado == "Cerrado"){
         cout << "Error_404: La acta ya se encuentra cerrada" << endl;
@@ -126,19 +150,28 @@ void Acta::agregarCalificaciones(){
     return;
 }
 
-void Acta::cerrarActa(){
+void Acta::cerrarActa(){//cambia el estado del acta a cerrado
     if (notaFinal == -1){
         cout << "calificacion final no calculada Error_404" << endl;
         return;
     }
+    if (estado == "Cerrado"){
+        cout << "El acta ya esta cerrada" << endl;
+        return;
+    }
     estado = "Cerrado";
+    cout << "Se cerro el acta" << endl;
     return;
 }
 
-void Acta::calcularNotaFinal(){
+void Acta::calcularNotaFinal(){//Calcula la notaFinal si ya estan listas las calificaciones
     float notaFinal = 0, porcentaje;
     if (CalificacionesJurados.size() < 2){
         cout << "No hay suficientes calificaciones!!" << endl;
+        return;
+    }
+    if (estado == "Cerrado"){
+        cout << "El acta ya esta cerrada" << endl;
         return;
     }
     for(list<Calificacion>::iterator calificacion = CalificacionesJurados.begin();calificacion!=CalificacionesJurados.end();calificacion++){
@@ -149,13 +182,15 @@ void Acta::calcularNotaFinal(){
     cout << "La nota final es de: " << notaFinal << endl;
     if(notaFinal > 3.5){
         estadoTrabajo = "Aprobado";
-    } else {
-        estadoTrabajo = "Reprobado";
+    } else if (observacionAdicionalJ1 == "" || observacionAdicionalJ1 == ""){
+        estadoTrabajo = "Pendiente";
+    } else{
+        estadoTrabajo = "Rechazado";
     }
     return;
 }
 
-void Acta::crearArchivoTXT(){
+void Acta::crearArchivoTXT(){//Crea un archivo .txt donde se guarda informacion del acta
     ofstream File;
     File.open("Actas.txt");
     File << " Nombre del trabajo - ID: " << nombreTrabajo << " - " << idActa << endl;
@@ -192,6 +227,7 @@ void Acta::crearArchivoTXT(){
     File << "Critrerios de evaluacion" << endl;
     for(list<Calificacion>::iterator calificacion = CalificacionesJurados.begin();calificacion!=CalificacionesJurados.end();calificacion++){
         File << "ID de Criterio: " << calificacion->getIdCriterio() << endl;
+        File << "Porcentaje: " << calificacion->getPorcentajeNota() << endl;
         File << "Descripcion Criterio:\n " << calificacion->getDescripcionCriterio() << endl;
         File << "Nota del jurado 1: " << calificacion->getNotaJ1() << endl;
         File << "Comentarios del jurado 1:\n " << calificacion->getComentarioJ1() << endl;

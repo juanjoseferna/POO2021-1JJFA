@@ -5,7 +5,7 @@
 #include "registro.h"
 #include "acta.h"
 
-int menu(){
+int menu(){//menu principal
     int opcion;
     cout << "Menu del sistema de actas de grado"<< endl;
     cout << " 1. Crear acta" << endl;
