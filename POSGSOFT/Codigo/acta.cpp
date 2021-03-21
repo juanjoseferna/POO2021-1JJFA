@@ -5,8 +5,12 @@ Acta::Acta (){//Constructor vacio de Acta
 }
 
 void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
-    int opc, salida = 0;
+    int opc, salida = 1;
     this->idActa = idActa;
+    cout << "Ingrese el periodo universitario" << endl;
+    fflush(stdin);
+    getline(cin, periodo);
+    fflush(stdin);
     cout << "Ingrese el nombre del trabajo" << endl;
     fflush(stdin);
     getline(cin, nombreTrabajo);
@@ -19,10 +23,10 @@ void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
         cin >> opc;
         if (opc == 1){
             tipoTrabajo = "Investigacion";
-            salida = 1;
+            salida = 0;
         } else if (opc == 2){
             tipoTrabajo = "Aplicado";
-            salida = 1;
+            salida = 0;
         }
     } while (salida != 0);
     salida = 0;
@@ -48,13 +52,25 @@ void Acta::crearActa(int idActa){//Rellenar datos de acta que este vacia
             cout << "Ingrese los datos del codirector" << endl;
             director.crearPersona(2);
             codirectorEstado = true;
-            salida = 1;
+            salida = 0;
         } else if (opc == 2){
             cout << "Listo!" << endl;
-            salida = 1;
+            codirectorEstado = true;
+            salida = 0;
         }
-    } while(salida == 0);
+    } while(salida != 0);
     return;
+}
+
+void Acta::setComentarioAdicional(){
+    cout << "Ingrese el comentario adicional del jurado 1" << endl;
+    fflush(stdin);
+    getline(cin, observacionAdicionalJ1);
+    fflush(stdin);
+    cout << "Ingrese el comentario adicional del jurado 2" << endl;
+    fflush(stdin);
+    getline(cin, observacionAdicionalJ2);
+    fflush(stdin);
 }
 
 int Acta::getCodigoJurado1(){//retorna el codigo del jurado1

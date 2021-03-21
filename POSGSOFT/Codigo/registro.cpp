@@ -39,10 +39,10 @@ void Registro::editarActa(){//Edita un acta segun la opcion que se elija
     	cout << " 1. Para agregar/cambiar calificaciones" << endl;
     	cout << " 2. Para cerrar el acta" << endl;
     	cout << " 3. Para calcular nota final" << endl;
-    	cout << " 4. Para agregar comentarios adicionales" << endl;	
+    	cout << " 4. Para agregar comentarios adicionales" << endl;
     	cout << " 0. Para volver al menu" << endl;
     	cin >> opc;
-    	switch(opc){
+    	switch(opc){ //setComentarioAdicional()
     		case 1:
 	    		cout << "Ingrese el id del acta a editar o -1 para volver:" << endl;
 	        	cin >> idActa;
@@ -67,6 +67,15 @@ void Registro::editarActa(){//Edita un acta segun la opcion que se elija
 	        	for ( list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++ ){
 					if (idActa == actaIt->getId()){
 						actaIt->calcularNotaFinal();
+					}
+				}
+				break;
+			case 4:
+				cout << "Ingrese el id del acta a cerrar o -1 para volver:" << endl;
+	        	cin >> idActa;
+	        	for ( list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++ ){
+					if (idActa == actaIt->getId()){
+						actaIt->setComentarioAdicional();
 					}
 				}
 				break;

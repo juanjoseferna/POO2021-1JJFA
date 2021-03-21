@@ -15,7 +15,7 @@ using std::ofstream;
 
 class Acta{
 	private:
-		string nombreTrabajo, estado, tipoTrabajo, fecha, estadoTrabajo, observacionAdicionalJ1, observacionAdicionalJ2;
+		string nombreTrabajo, estado, tipoTrabajo, fecha, estadoTrabajo, observacionAdicionalJ1, observacionAdicionalJ2, periodo;
 		int idActa, numeroTotalCriterios = 8;
 		list<Calificacion> CalificacionesJurados;
 		float notaFinal = -1;
@@ -36,6 +36,7 @@ class Acta{
 		int getCodigoJurado1();
 		int getCodigoJurado2();
 		int getCodigoDirector();
+		void setComentarioAdicional();
 		void crearActa(int);
 		void cerrarActa();
 		void imprimirActa();
