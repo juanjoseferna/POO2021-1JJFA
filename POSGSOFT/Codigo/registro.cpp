@@ -6,7 +6,8 @@ Registro::Registro(){//constructor de Registro vacio
 
 void Registro::agregarActa(){
 	Acta acta; //Crea el acta vacía
-	acta.crearActa(actas.size()); //Le añade datos al acta
+	acta.crearActa(idActas); //Le añade datos al acta
+	idActas++;
 	actas.push_back(acta); //Agrega el acta a la lista de actas
 	return;
 }

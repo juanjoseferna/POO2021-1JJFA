@@ -210,6 +210,7 @@ void Acta::crearArchivoTXT(){//Crea un archivo .txt donde se guarda informacion 
     ofstream File;
     File.open("Actas.txt");
     File << " Nombre del trabajo - ID: " << nombreTrabajo << " - " << idActa << endl;
+    File << " Periodo" << periodo << endl;
     File << " Estado: " << estado << endl;
     File << " Fecha: " << fecha << endl;
     File << " Tipo de trabajo: " << tipoTrabajo << endl;

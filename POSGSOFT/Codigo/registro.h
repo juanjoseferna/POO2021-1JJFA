@@ -14,6 +14,7 @@ using std::endl;
 class Registro{
 	private:
 		list<Acta> actas;
+		int idActas = 0;
 	public:
 		Registro();
 		void agregarActa();
