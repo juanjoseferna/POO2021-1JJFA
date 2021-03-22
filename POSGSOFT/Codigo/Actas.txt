@@ -1,0 +1,23 @@
+ Nombre del trabajo - ID: La investigacion de Big Foot - 0
+ Estado: Cerrado
+ Fecha: 19 Septiembre 2012
+ Tipo de trabajo: Investigacion
+ Estado: Cerrado
+ Nota final (Si es -1 es porque aun faltan calificaciones): 2.5
+Autor: 
+ Nombre y cargo: Luan Palomino - Estudiante
+ Email y telefono: Lpalomino@outlook.com - 312444
+ CC: 14546
+Primer jurado: 
+ Nombre y cargo: Lucas Lopez -  JuradoExterno
+ Email y telefono: llopez@javerianacali.edu.co - 123455
+ CC: 65456
+Segundo jurado: 
+ Nombre y cargo: Percy Jackson -  JuradoExterno
+ Email y telefono: percyelmarmuerto@gmail.com - 134124
+ CC: 34565
+Director: 
+ Nombre y cargo: Gerrardo Sarria - Director
+ Email y telefono: gsarria@javerianacali.edu.co - 456554
+ CC: 65431
+Codirector: ---No existe---
