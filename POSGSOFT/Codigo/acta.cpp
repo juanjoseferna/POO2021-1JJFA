@@ -71,6 +71,7 @@ void Acta::setComentarioAdicional(){
     fflush(stdin);
     getline(cin, observacionAdicionalJ2);
     fflush(stdin);
+    return;
 }
 
 int Acta::getCodigoJurado1(){//retorna el codigo del jurado1
