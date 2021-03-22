@@ -143,7 +143,6 @@ void Registro::datosPosgrado(){//Imprime los datos seleccionados
 				break;
 			case 5:
 				cout << "Jurados:" << endl;
-				int temp;
 				for(list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++){
 					for (list<int>::iterator codigoIt = codigosLista.begin(); codigoIt != codigosLista.end(); codigoIt++){
 						if (*codigoIt == actaIt->getCodigoJurado1()){
