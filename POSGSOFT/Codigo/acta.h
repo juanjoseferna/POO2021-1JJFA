@@ -43,7 +43,6 @@ class Acta{
 		void calcularNotaFinal();
 		void agregarCalificaciones();
 		void crearArchivoTXT();
-		void crearArchivoTXTPersona(Persona);
 		void agregarComentarioExtra();
 };
 
