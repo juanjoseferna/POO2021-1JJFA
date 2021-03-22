@@ -103,15 +103,7 @@ void Registro::datosPosgrado(){//Imprime los datos seleccionados
 		cin >> opc;
 		switch(opc){
 			case 1:
-				for(list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++){
-					if (actaIt->getTipoTrabajo() == "Investigacion"){
-						contador++;
-						actaIt->imprimirActa();
-					}
-				}
-				cout << "Total de actas relacionadas con la industria: " << contador << endl;
-				break;
-			case 2:
+				contador = 0;
 				for(list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++){
 					if (actaIt->getTipoTrabajo() == "Aplicado"){
 						contador++;
@@ -119,6 +111,16 @@ void Registro::datosPosgrado(){//Imprime los datos seleccionados
 					}
 				}
 				cout << "Total de actas relacionadas con la industria: " << contador << endl;
+				break;
+			case 2:
+				contador = 0;
+				for(list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++){
+					if (actaIt->getTipoTrabajo() == "Investigacion"){
+						contador++;
+						actaIt->imprimirActa();
+					}
+				}
+				cout << "Total de actas de investigacion: " << contador << endl;
 				break;
 			case 3:
 				cout << "Ingrese el codigo del director a buscar: " << endl;
@@ -130,7 +132,6 @@ void Registro::datosPosgrado(){//Imprime los datos seleccionados
 						cout << "Nombre - ID " << actaIt->getNombreActa() << " - " << actaIt->getId() << endl;
 					}
 				}
-				cout << "Total de actas relacionadas con la industria: " << contador << endl;
 				break;
 			case 4:
 				cout << "Ingrese el numero del jurado a buscar: " << endl;
@@ -145,6 +146,8 @@ void Registro::datosPosgrado(){//Imprime los datos seleccionados
 			case 5:
 				cout << "Jurados:" << endl;
 				for(list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++){
+					bandera1 = true;
+					bandera2 = true;
 					for (list<int>::iterator codigoIt = codigosLista.begin(); codigoIt != codigosLista.end(); codigoIt++){
 						if (*codigoIt == actaIt->getCodigoJurado1()){
 							bandera1 = false;
@@ -181,6 +184,16 @@ void Registro::datosPosgrado(){//Imprime los datos seleccionados
 					cin >> intTipoJurado;
 					for(list<Acta>::iterator actaIt = actas.begin(); actaIt != actas.end(); actaIt++){
 						if (intTipoJurado == 1){
+							if (actaIt->getTipoJurado1() == "JuradoExterno"){
+								cout << "Nombre - Codigo: " << actaIt->getNombreJurado1() << " - " << actaIt->getCodigoJurado1() << endl;
+								salida = 0;
+							}
+							if (actaIt->getTipoJurado2() == "JuradoExterno"){
+								cout << "Nombre - Codigo: " << actaIt->getNombreJurado2() << " - " << actaIt->getCodigoJurado2() << endl;
+								salida = 0;
+							}
+						}
+						else if (intTipoJurado == 2){
 							if (actaIt->getTipoJurado1() == "JuradoInterno"){
 								cout << "Nombre - Codigo: " << actaIt->getNombreJurado1() << " - " << actaIt->getCodigoJurado1() << endl;
 								salida = 0;

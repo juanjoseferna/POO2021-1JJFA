@@ -41,6 +41,7 @@ int main(){
 				actas.crearArchivoTxt();
 				break;
 			case 6:
+				actas.datosPosgrado();
 				break;
 		}
 	} while(opcion != 0);

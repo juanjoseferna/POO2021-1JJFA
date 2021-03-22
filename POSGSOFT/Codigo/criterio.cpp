@@ -27,7 +27,7 @@ void Criterio::crearCriterio(int id){//le da informacion de un criterio segun el
         descripcion = "Calidad y presentación del documento escrito";
         porcentaje = 0.075;
     } else if (id == 7){
-        descripcion = "Presentación oral";
+        descripcion = "Presentacion oral";
         porcentaje = 0.075;
     }
     return;
