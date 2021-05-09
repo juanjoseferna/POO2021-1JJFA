@@ -1,0 +1,3 @@
+C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/CMakeFiles/casino.dir
+C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/CMakeFiles/rebuild_cache.dir
