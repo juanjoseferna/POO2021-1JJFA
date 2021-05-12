@@ -13,7 +13,6 @@
 class Mayor13 : public Juego {
 
 protected:
-    int opc;
     virtual float calcularResultado(float gonzosApostar) override;
 public:
     virtual ~Mayor13();
