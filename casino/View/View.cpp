@@ -99,6 +99,7 @@ void View::verPrincipal()
                 break;
             case 3:
 
+                break;
         }
     } while (opcion != 0);
 }
