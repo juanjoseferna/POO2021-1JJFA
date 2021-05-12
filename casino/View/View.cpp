@@ -51,7 +51,7 @@ void View::pedirUsuario(){
 }
 
 void View:: jugarView(long idJugador) {
-    int opcion;
+    int opcion = 0;
     float cantGonzos;
     int idJuego;
     do{
@@ -77,6 +77,7 @@ int View::mostrarMenu()
     cout << "2. Jugar" << std::endl;
     cout << "3. Consultar jugador - pendiente " << std::endl;
     cout << "4. Vender gonzos - pendiente " << std::endl;
+    cout << "5. recargar gonzos" << endl;
     cout << "0. Salir\n"
          << std::endl;
     cout << "Digita el numero: ";
@@ -87,8 +88,7 @@ int View::mostrarMenu()
 void View::verPrincipal()
 {
     int opcion;
-    do
-    {
+    do{
         opcion = mostrarMenu();
         switch (opcion)
         {
@@ -97,6 +97,8 @@ void View::verPrincipal()
             case 2:
                 pedirUsuario();
                 break;
+            case 3:
+
         }
     } while (opcion != 0);
 }

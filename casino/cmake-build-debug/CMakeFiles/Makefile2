@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\finch\Desktop\Universidad\C C++\casino"
+CMAKE_SOURCE_DIR = "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\finch\Desktop\Universidad\C C++\casino\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -92,14 +92,14 @@ clean: CMakeFiles/casino.dir/clean
 CMakeFiles/casino.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\finch\Desktop\Universidad\C C++\casino\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target casino"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target casino"
 .PHONY : CMakeFiles/casino.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/casino.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\finch\Desktop\Universidad\C C++\casino\cmake-build-debug\CMakeFiles" 9
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/casino.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\finch\Desktop\Universidad\C C++\casino\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/casino.dir/rule
 
 # Convenience name for target.

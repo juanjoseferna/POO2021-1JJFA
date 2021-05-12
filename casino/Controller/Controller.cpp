@@ -42,18 +42,19 @@ bool Controller::jugar(int idJuego, long idJugador, float gonzosApostar) {
     // Si no hay errores se inicia el juego
     int posJuego = idJuego -1; // Se corrige la posicion para acceder al juego
     Juego * pJuegoAJugar = casino.consultarJuegos().at(idJuego-1);
-
     // Consutlta al jugador, consulta los gonzos iniciales, juega y obtiene el resultado
-
-
+    casino.consultarJugador(idJugador)->mostrarInfo();
+    gonzosApostar= pJuegoAJugar->jugar(gonzosApostar);
     // Actualiza el saldo del jugador con el resultado
-
-
+    casino.consultarJugador(idJugador)->actualizarGonzos(gonzosApostar);
     // Actualiza la cantidad de juegos jugados
-
-
+    casino.consultarJugador(idJugador)->aumentarJuegos();
     // Retorna verdadero si el jugador ganó y false si el jugador perdio
-    cout << "Por implementar \n";
+    if (gonzosApostar == 0){
+        return false;
+    } else {
+        return true;
+    }
 }
 
 void Controller::verInfoJugador(long idJugador){
@@ -78,10 +79,26 @@ bool Controller::verPuedeContinuar(int idJugador) {
 }
 
 void Controller::retirarJugador(long idJugador) {
+    if (!casino.verExisteJugador(idJugador)) {
+        throw std::domain_error("El jugador con la identificacion recibida NO existe");
+    }
+    casino.retirarJugador(idJugador);
     cout << "Fase dos, por hacer \n";
 }
 
-void Controller::recargarGonzos(long idJugador) {
-    cout << "Fase dos, por hacer \n";
+void Controller::recargarGonzos(long idJugador, double dinero) {
+    float gonzos = casino.convertirPesosAGonzos(dinero);
+    int azar;
+    if (casino.verExisteJugador(idJugador)){
+        srand(time(nullptr));
+        azar = 1+rand()%11;// numeros de 1 a 10
+        if (azar > 5){
+            cout << "Felicidades! Tus gonzos se han multiplicado" << endl;
+            gonzos *= 2;
+        }
+        casino.consultarJugador(idJugador)->actualizarGonzos(gonzos);
+    }else {
+        throw std::domain_error("El jugador con la identificacion recibida no existe\n");
+    }
 }
 

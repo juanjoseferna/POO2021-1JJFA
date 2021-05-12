@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug"/>
+				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="casino">
-				<Option output="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/casino.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug"/>
+				<Option output="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/casino.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 casino"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 casino"/>
+					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="casino/fast">
-				<Option output="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/casino.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug"/>
+				<Option output="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/casino.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,79 +53,79 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 casino/fast"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 casino/fast"/>
+					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug"/>
+				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug"/>
+				<Option working_dir="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Controller/Controller.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Controller/Controller.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Controller/Controller.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Controller/Controller.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Casino.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Casino.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Casino.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Casino.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/DosColores.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/DosColores.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/DosColores.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/DosColores.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Juego.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Juego.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Juego.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Juego.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Jugador.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Jugador.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Jugador.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Jugador.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Mayor13.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Mayor13.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/Model/Mayor13.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Mayor13.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/View/View.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/View/View.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/View/View.h">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/View/View.h">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/main.cpp">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/main.cpp">
 			<Option target="casino"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/casino/CMakeLists.txt">
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
