@@ -18,7 +18,7 @@ float DosColores::jugar(float gonzosApostar) {
     return gonzosResultado;
 }
 
-float DosColores::calcularResultado(float gonzosApostar) {
+float DosColores::calcularResultado(float gonzosApostar){
     cout << "Por implementar \n";
     if (colorCasino == colorJugador && numeroCasino == numeroJugador){
         // Si coincide tanto el valor del dado como el color, el usuario ganará 4 veces lo apostado

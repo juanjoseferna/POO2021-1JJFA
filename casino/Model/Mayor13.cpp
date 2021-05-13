@@ -6,7 +6,7 @@
 
 float Mayor13::jugar(float gonzosApostar) {
     int opc;
-    float gonzosResultado
+    float gonzosResultado;
     srand(time(nullptr));
     numeroJugador = 1+rand()%14;// numeros de 1 a 13
     numeroCasino = 1+rand()%14;// numeros de 1 a 13

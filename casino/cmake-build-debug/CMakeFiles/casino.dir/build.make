@@ -179,6 +179,32 @@ CMakeFiles/casino.dir/Model/DosColores.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/casino.dir/Model/DosColores.cpp.s"
 	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\DosColores.cpp" -o CMakeFiles\casino.dir\Model\DosColores.cpp.s
 
+CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.obj: CMakeFiles/casino.dir/flags.make
+CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.obj: ../Model/AdivinoParesImpares.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.obj"
+	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\casino.dir\Model\AdivinoParesImpares.cpp.obj -c "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\AdivinoParesImpares.cpp"
+
+CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.i"
+	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\AdivinoParesImpares.cpp" > CMakeFiles\casino.dir\Model\AdivinoParesImpares.cpp.i
+
+CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.s"
+	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\AdivinoParesImpares.cpp" -o CMakeFiles\casino.dir\Model\AdivinoParesImpares.cpp.s
+
+CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.obj: CMakeFiles/casino.dir/flags.make
+CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.obj: ../Model/PiedraPapelTijera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.obj"
+	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\casino.dir\Model\PiedraPapelTijera.cpp.obj -c "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\PiedraPapelTijera.cpp"
+
+CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.i"
+	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\PiedraPapelTijera.cpp" > CMakeFiles\casino.dir\Model\PiedraPapelTijera.cpp.i
+
+CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.s"
+	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\Model\PiedraPapelTijera.cpp" -o CMakeFiles\casino.dir\Model\PiedraPapelTijera.cpp.s
+
 # Object files for target casino
 casino_OBJECTS = \
 "CMakeFiles/casino.dir/main.cpp.obj" \
@@ -188,7 +214,9 @@ casino_OBJECTS = \
 "CMakeFiles/casino.dir/Model/Casino.cpp.obj" \
 "CMakeFiles/casino.dir/Model/Juego.cpp.obj" \
 "CMakeFiles/casino.dir/Model/Mayor13.cpp.obj" \
-"CMakeFiles/casino.dir/Model/DosColores.cpp.obj"
+"CMakeFiles/casino.dir/Model/DosColores.cpp.obj" \
+"CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.obj" \
+"CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.obj"
 
 # External object files for target casino
 casino_EXTERNAL_OBJECTS =
@@ -201,11 +229,13 @@ casino.exe: CMakeFiles/casino.dir/Model/Casino.cpp.obj
 casino.exe: CMakeFiles/casino.dir/Model/Juego.cpp.obj
 casino.exe: CMakeFiles/casino.dir/Model/Mayor13.cpp.obj
 casino.exe: CMakeFiles/casino.dir/Model/DosColores.cpp.obj
+casino.exe: CMakeFiles/casino.dir/Model/AdivinoParesImpares.cpp.obj
+casino.exe: CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.obj
 casino.exe: CMakeFiles/casino.dir/build.make
 casino.exe: CMakeFiles/casino.dir/linklibs.rsp
 casino.exe: CMakeFiles/casino.dir/objects1.rsp
 casino.exe: CMakeFiles/casino.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable casino.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\finch\Desktop\Universidad\C C++\POO2021-1JJFA\casino\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable casino.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\casino.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

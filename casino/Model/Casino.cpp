@@ -6,7 +6,7 @@
 
 // Constructor que inicializa las ganancias y perdidas en cero
 Casino::Casino() {
-    cout <<"Inicialice casino" << endl;
+    cout <<"Inicialice casino";
     jugadoresMap.clear(); // Se limpian los jugadores del casino
 }
 
@@ -15,11 +15,8 @@ void Casino::agregarJuego(Juego * juego) {
     juegosDisponibles.push_back(juego);
 }
 
-
-
 void Casino::agregarJugador(Jugador *pJugador) {
     jugadoresMap[ pJugador->getId() ] = pJugador;
-   cout << "Por implementar \n";
 }
 
 bool Casino::verExisteJugador(long id) {
@@ -46,7 +43,6 @@ vector<Juego *> &Casino::consultarJuegos() {
 void Casino::retirarJugador(long id) {
     jugadoresMap.erase(id);
 }
-
 
 double Casino::convertirGonzosPesos(float gonzos) {
     double dinero = gonzos * 100;

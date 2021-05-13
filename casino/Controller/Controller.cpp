@@ -4,16 +4,21 @@
 
 #include "Controller.h"
 #include "../Model/Mayor13.h"
+#include "../Model/AdivinoParesImpares.h"
 #include "../Model/DosColores.h"
+#include "../Model/PiedraPapelTijera.h"
 
 Controller::Controller() {
   this->casino = Casino();
   // Se agregan los juegos disponibles para el casino
   Mayor13 * juego1 = new Mayor13();
   DosColores * juego2 = new DosColores();
+  AdivinoParesImpares * juego3 = new AdivinoParesImpares();
+  PiedraPapelTijera * juego4 = new PiedraPapelTijera();
   casino.agregarJuego(juego1);
   casino.agregarJuego(juego2);
-
+  casino.agregarJuego(juego3);
+  casino.agregarJuego(juego4);
 }
 void Controller::agregarJugador(long id, string nombreJugador, double dinero)
 {
@@ -83,7 +88,7 @@ void Controller::retirarJugador(long idJugador) {
         throw std::domain_error("El jugador con la identificacion recibida NO existe");
     }
     casino.retirarJugador(idJugador);
-    cout << "Fase dos, por hacer \n";
+    //cout << "Fase dos, por hacer \n";
 }
 
 void Controller::recargarGonzos(long idJugador, double dinero) {

@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Controller/Controller.h">
 			<Option target="casino"/>
 		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/AdivinoParesImpares.cpp">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/AdivinoParesImpares.h">
+			<Option target="casino"/>
+		</Unit>
 		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Casino.cpp">
 			<Option target="casino"/>
 		</Unit>
@@ -114,6 +120,12 @@
 			<Option target="casino"/>
 		</Unit>
 		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Mayor13.h">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/PiedraPapelTijera.cpp">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/PiedraPapelTijera.h">
 			<Option target="casino"/>
 		</Unit>
 		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/View/View.cpp">
