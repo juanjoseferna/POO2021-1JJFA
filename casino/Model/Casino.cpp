@@ -45,7 +45,8 @@ void Casino::retirarJugador(long id) {
 }
 
 double Casino::convertirGonzosPesos(float gonzos) {
-    double dinero = gonzos * 100;
+    double dinero;
+    dinero = gonzos * 100;
     return dinero;
 }
 

@@ -13,6 +13,8 @@ Jugador::Jugador(long id, string nombre, float cantGonzos): Jugador() {
     this->id = id;
     this->nombre = nombre;
     this->cantGonzos = cantGonzos;
+    this->cantJuegosGanados = 0;
+    this->cantJuegos = 0;
 }
 
 
@@ -26,11 +28,17 @@ void Jugador::mostrarInfo() {
     cout << "Name: " << nombre << endl;
     cout << "Gonzos: " << cantGonzos << endl;
     cout << "Cantidad de jugadas: " << cantJuegos << endl;
+    cout << "Cantidad de juegos ganados: " << cantJuegosGanados << endl;
+    cout << "Cantidad de juegos perdidos: " << cantJuegos - cantJuegosGanados << endl;
 }
 
 void Jugador::aumentarJuegos() {
     // Incrementa la cantidad de juegos que ha jugado el jugador
-    cantJuegos ++;
+    cantJuegos++;
+}
+
+void Jugador::aumentarJuegosGanados() {
+    cantJuegosGanados++;
 }
 
 void Jugador::actualizarGonzos(float resultadoJuego) {
@@ -52,7 +60,6 @@ long Jugador::getId() const {
 int Jugador::getCantJuegos() const {
     return cantJuegos;
 }
-
 
 
 

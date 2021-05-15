@@ -39,11 +39,8 @@ void View::pedirUsuario(){
         long idJugador;
         cout << "Ingrese el id del jugador para el que quiere jugar \n";
         cin >> idJugador;
-        controller.verInfoJugador(idJugador);
-
         // LLama a la función que hacer toda la logica de jugar.
         jugarView(idJugador);
-
     }catch (std::domain_error ex){
         // Se muestra un error si el usuario no existe
         cout << ex.what();
@@ -51,22 +48,25 @@ void View::pedirUsuario(){
 }
 
 void View:: jugarView(long idJugador) {
-    int opcion = 0;
     float cantGonzos;
-    int idJuego;
+    int idJuego, opc;
     do{
-        try {
-            do {
-                cout << "Cuantos gonzos desea apostar \n";
-                cin >> cantGonzos;
-            } while (cantGonzos <= 0);
-
-            // Agregue el esto de la logica para el juego 1. Juego mayor a 13, 2 juego de dos colores.
-            cout << "Por implementar \n";
-        } catch (std::domain_error ex){
-            cout << ex.what();
-        }
-    }while (opcion!=0);
+        cout << "Lista de juegos: " << endl;
+        cout << "1. Mayor trece " << endl;
+        cout << "2. Dos colores " << endl;
+        cout << "3. Adivino de pares e impares " << endl;
+        cout << "4. Piedra papel o tijera " << endl;
+        cout << "5. Saca tres " << endl;
+        cout << "Digita el id del juego que quiere jugar: " << endl;
+        cin >> idJuego;
+        cout << "Ingrese la cantidad de gonzos que desea apostar" << endl;
+        cin >> cantGonzos;
+        controller.jugar(idJuego, idJugador, cantGonzos);
+        cout << "Desea seguir jugando?" << endl;
+        cout << " 1. Si" << endl;
+        cout << " 2. No" << endl;
+        cin >> opc;
+    }while (opc!=2);
 }
 
 int View::mostrarMenu()
@@ -75,9 +75,10 @@ int View::mostrarMenu()
     cout << "Menu\n";
     cout << "1. Agregar jugador " << std::endl;
     cout << "2. Jugar" << std::endl;
-    cout << "3. Consultar jugador - pendiente " << std::endl;
-    cout << "4. Vender gonzos - pendiente " << std::endl;
-    cout << "5. recargar gonzos" << endl;
+    cout << "3. Consultar jugador" << std::endl;
+    cout << "4. Vender gonzos  " << std::endl;
+    cout << "5. Comprar gonzos" << endl;
+    cout << "6. Eliminar jugador" << endl;
     cout << "0. Salir\n"
          << std::endl;
     cout << "Digita el numero: ";
@@ -92,24 +93,59 @@ void View::verPrincipal()
         opcion = mostrarMenu();
         switch (opcion)
         {
-            case 1: agregarJugador();
+            case 1:
+                agregarJugador();
                 break;
             case 2:
                 pedirUsuario();
                 break;
             case 3:
-
+                mostrarJugador();
+                break;
+            case 4:
+                gonzosDineroView();
+                break;
+            case 5:
+                recargarGonzosView();
+                break;
+            case 6:
+                retirarJugador();
                 break;
         }
     } while (opcion != 0);
 }
 
 void View::mostrarJugador() {
+    int id;
+    cout << "Digita el id del usuario a consultar: " << endl;
+    cin >> id;
+    controller.verInfoJugador(id);
     // LLama al metodo del controller que muestra los datos
-    cout << "Fase dos, por hacer \n";
 }
 
 void View::retirarJugador() {
-    cout << "Fase dos, por hacer \n";
+    int id;
+    cout << "Digita el id del usuario a retirar: " << endl;
+    cin >> id;
+    controller.retirarJugador(id);
 }
 
+void View::recargarGonzosView() {
+    int id;
+    double dinero;
+    cout << "Digita el id del usuario a retirar: " << endl;
+    cin >> id;
+    cout << "Digita el dinero a recargar: " << endl;
+    cin >> dinero;
+    controller.recargarGonzos(id, dinero);
+}
+
+void View::gonzosDineroView() {
+    int id;
+    double gonzos;
+    cout << "Digita el id del usuario a vender los gonzos: " << endl;
+    cin >> id;
+    cout << "Digita los gonzos: " << endl;
+    cin >> gonzos;
+    controller.gonzosDinero(id,gonzos);
+}

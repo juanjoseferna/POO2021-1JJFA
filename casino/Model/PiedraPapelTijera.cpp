@@ -5,19 +5,20 @@
 #include "PiedraPapelTijera.h"
 
 PPT retornaPPT(int opc){
-    switch (opc){
-        case 1:
-            return PIEDRA;
-        case 2:
-            return PAPEL;
-        case 3:
-            return TIJERA;
+    if (opc == 1) {
+        return PIEDRA;
+    }
+    if (opc == 2) {
+        return PAPEL;
+    }
+    if (opc == 3) {
+        return TIJERA;
     }
 }
 
 float PiedraPapelTijera::jugar(float gonzosApostar){
     srand(time(nullptr));
-    numeroCasino = 1+rand()%4; //numero random entre 1 y 3
+    numeroCasino = 1+rand()%(4-1); //numero random entre 1 y 3
     cout << "Elija su opcion" << endl;
     cout << " 1. Piedra" << endl;
     cout << " 2. Papel" << endl;
@@ -32,28 +33,36 @@ float PiedraPapelTijera::jugar(float gonzosApostar){
 float PiedraPapelTijera::calcularResultado(float gonzosApostar) {
     if (pptJugador == PIEDRA && pptCasino == PIEDRA){
         cout << "Empate!" << endl;
-    } else if (pptJugador == PIEDRA && pptCasino == PAPEL){
-        cout << "Pierdes! Papel le gana a piedra";
+    }
+    if (pptJugador == PIEDRA && pptCasino == PAPEL){
+        cout << "Pierdes! Papel le gana a piedra, perdiste " << gonzosApostar << endl;
         gonzosApostar = 0;
-    } else if (pptJugador == PIEDRA && pptCasino== TIJERA){
-        cout << "Ganaste! Piedra le gana a Tijera";
+    }
+    if (pptJugador == PIEDRA && pptCasino== TIJERA){
         gonzosApostar += gonzosApostar;
-    } else if (pptJugador == PAPEL && pptCasino == PAPEL){
+        cout << "Ganaste! Piedra le gana a Tijera, ganas " << gonzosApostar << endl;
+    }
+    if (pptJugador == PAPEL && pptCasino == PAPEL){
         cout << "Empate!" << endl;
-    } else if (pptJugador == PAPEL && pptCasino == TIJERA){
-        cout << "Pierdes! tijera le gana a papel";
+    }
+    if (pptJugador == PAPEL && pptCasino == TIJERA){
+        cout << "Pierdes! tijera le gana a papel, pierdes " << gonzosApostar << endl;
         gonzosApostar = 0;
-    } else if (pptJugador == PAPEL && pptCasino== PIEDRA){
-        cout << "Ganaste! papel le gana a piedra";
+    }
+    if (pptJugador == PAPEL && pptCasino== PIEDRA){
         gonzosApostar += gonzosApostar;
-    } else if (pptJugador == TIJERA && pptCasino == TIJERA){
+        cout << "Ganaste! papel le gana a piedra, ganas "<< gonzosApostar << endl;
+    }
+    if (pptJugador == TIJERA && pptCasino == TIJERA){
         cout << "Empate!" << endl;
-    } else if (pptJugador == TIJERA && pptCasino == PIEDRA){
-        cout << "Pierdes! Piedra le gana a Tijera";
+    }
+    if (pptJugador == TIJERA && pptCasino == PIEDRA){
+        cout << "Pierdes! Piedra le gana a Tijera, pierdes " << gonzosApostar << endl;
         gonzosApostar = 0;
-    } else if (pptJugador == TIJERA && pptCasino== PAPEL){
-        cout << "Ganaste! Tijera le gana a Papel";
+    }
+    if (pptJugador == TIJERA && pptCasino== PAPEL){
         gonzosApostar += gonzosApostar;
+        cout << "Ganaste! Tijera le gana a Papel, ganas " << gonzosApostar << endl;
     }
     return gonzosApostar;
 }

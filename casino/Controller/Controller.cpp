@@ -7,6 +7,7 @@
 #include "../Model/AdivinoParesImpares.h"
 #include "../Model/DosColores.h"
 #include "../Model/PiedraPapelTijera.h"
+#include "../Model/sacaTres.h"
 
 Controller::Controller() {
   this->casino = Casino();
@@ -15,13 +16,15 @@ Controller::Controller() {
   DosColores * juego2 = new DosColores();
   AdivinoParesImpares * juego3 = new AdivinoParesImpares();
   PiedraPapelTijera * juego4 = new PiedraPapelTijera();
+  sacaTres * juego5 = new sacaTres();
   casino.agregarJuego(juego1);
   casino.agregarJuego(juego2);
   casino.agregarJuego(juego3);
   casino.agregarJuego(juego4);
+  casino.agregarJuego(juego5);
 }
-void Controller::agregarJugador(long id, string nombreJugador, double dinero)
-{
+
+void Controller::agregarJugador(long id, string nombreJugador, double dinero){
     // Se agrega jugador solo si no existe con anticipacion
     if (casino.verExisteJugador(id) == false){
         // Se convierte el dinero a Gonzos
@@ -35,6 +38,7 @@ void Controller::agregarJugador(long id, string nombreJugador, double dinero)
 }
 
 bool Controller::jugar(int idJuego, long idJugador, float gonzosApostar) {
+    float gonzosActuales = casino.consultarJugador(idJugador)->getCantGonzos();
     if (casino.verExisteJugador(idJugador) == false){
         throw std::domain_error("El jugador con la identificacion recibida NO existe, no es posible jugar\n");
     }
@@ -44,9 +48,13 @@ bool Controller::jugar(int idJuego, long idJugador, float gonzosApostar) {
     if (verPuedeContinuar(idJugador)== false){
         throw std::domain_error("No tienes saldo suficiente para jugar\n");
     }
+    if (gonzosActuales < gonzosApostar){
+        throw std::domain_error("No tienes saldo suficiente para jugar\n");
+    }
+    casino.consultarJugador(idJugador)->actualizarGonzos(-gonzosApostar);//Quita los gonzos a apostar
     // Si no hay errores se inicia el juego
     int posJuego = idJuego -1; // Se corrige la posicion para acceder al juego
-    Juego * pJuegoAJugar = casino.consultarJuegos().at(idJuego-1);
+    Juego * pJuegoAJugar = casino.consultarJuegos().at(posJuego);
     // Consutlta al jugador, consulta los gonzos iniciales, juega y obtiene el resultado
     casino.consultarJugador(idJugador)->mostrarInfo();
     gonzosApostar= pJuegoAJugar->jugar(gonzosApostar);
@@ -58,6 +66,7 @@ bool Controller::jugar(int idJuego, long idJugador, float gonzosApostar) {
     if (gonzosApostar == 0){
         return false;
     } else {
+        casino.consultarJugador(idJugador)->aumentarJuegosGanados();
         return true;
     }
 }
@@ -102,8 +111,22 @@ void Controller::recargarGonzos(long idJugador, double dinero) {
             gonzos *= 2;
         }
         casino.consultarJugador(idJugador)->actualizarGonzos(gonzos);
-    }else {
+    } else {
         throw std::domain_error("El jugador con la identificacion recibida no existe\n");
     }
 }
 
+void Controller::gonzosDinero(long idJugador, double gonzos){
+    double dinero = casino.convertirGonzosPesos(gonzos);
+    int azar;
+    float gonzosActuales = casino.consultarJugador(idJugador)->getCantGonzos();
+    if (casino.verExisteJugador(idJugador)){
+        if(gonzosActuales >= gonzos) {
+            casino.consultarJugador(idJugador)->actualizarGonzos(-gonzos);
+        } else {
+            throw std::domain_error("Insuficientes gonzos\n");
+        }
+    }else {
+        throw std::domain_error("El jugador con la identificacion recibida no existe\n");
+    }
+}

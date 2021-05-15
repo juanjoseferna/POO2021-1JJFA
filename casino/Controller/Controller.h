@@ -33,5 +33,6 @@ public:
     void verInfoJugador(long idJugador);
     void retirarJugador(long idJugador);
     void recargarGonzos(long idJugador, double dinero);
+    void gonzosDinero(long idJugador, double gonzos);
 };
 #endif //CASINO_CONTROLLER_H

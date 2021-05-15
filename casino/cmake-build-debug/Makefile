@@ -357,6 +357,33 @@ Model/PiedraPapelTijera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.s
 .PHONY : Model/PiedraPapelTijera.cpp.s
 
+Model/sacaTres.obj: Model/sacaTres.cpp.obj
+
+.PHONY : Model/sacaTres.obj
+
+# target to build an object file
+Model/sacaTres.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/sacaTres.cpp.obj
+.PHONY : Model/sacaTres.cpp.obj
+
+Model/sacaTres.i: Model/sacaTres.cpp.i
+
+.PHONY : Model/sacaTres.i
+
+# target to preprocess a source file
+Model/sacaTres.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/sacaTres.cpp.i
+.PHONY : Model/sacaTres.cpp.i
+
+Model/sacaTres.s: Model/sacaTres.cpp.s
+
+.PHONY : Model/sacaTres.s
+
+# target to generate assembly for a file
+Model/sacaTres.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/sacaTres.cpp.s
+.PHONY : Model/sacaTres.cpp.s
+
 View/View.obj: View/View.cpp.obj
 
 .PHONY : View/View.obj
@@ -444,6 +471,9 @@ help:
 	@echo ... Model/PiedraPapelTijera.obj
 	@echo ... Model/PiedraPapelTijera.i
 	@echo ... Model/PiedraPapelTijera.s
+	@echo ... Model/sacaTres.obj
+	@echo ... Model/sacaTres.i
+	@echo ... Model/sacaTres.s
 	@echo ... View/View.obj
 	@echo ... View/View.i
 	@echo ... View/View.s

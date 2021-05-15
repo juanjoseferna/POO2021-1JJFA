@@ -25,12 +25,14 @@ private: //atributos
 private:
     float cantGonzos{};
     int cantJuegos;
+    int cantJuegosGanados;
 
 public:
     Jugador();
     Jugador(long id, string nombre, float cantGonzos);
     ~Jugador(); // Destructor
     void aumentarJuegos();
+    void aumentarJuegosGanados();
     void mostrarInfo(); // Presenta información del diner, los gonzos, cantidad de juegos ganados y perdidos
     void actualizarGonzos(float resultadoJuego);
     long getId() const;

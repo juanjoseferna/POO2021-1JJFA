@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Jugador.cpp" "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/Jugador.cpp.obj"
   "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/Mayor13.cpp" "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/Mayor13.cpp.obj"
   "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/PiedraPapelTijera.cpp" "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/PiedraPapelTijera.cpp.obj"
+  "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/sacaTres.cpp" "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/sacaTres.cpp.obj"
   "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/View/View.cpp" "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/CMakeFiles/casino.dir/View/View.cpp.obj"
   "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/main.cpp" "C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/cmake-build-debug/CMakeFiles/casino.dir/main.cpp.obj"
   )

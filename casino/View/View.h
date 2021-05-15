@@ -18,6 +18,8 @@ private:
     void agregarJugador();
     void retirarJugador();
     void mostrarJugador();
+    void recargarGonzosView();
+    void gonzosDineroView();
 
 public:
     View();

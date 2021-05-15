@@ -128,6 +128,12 @@
 		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/PiedraPapelTijera.h">
 			<Option target="casino"/>
 		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/sacaTres.cpp">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/Model/sacaTres.h">
+			<Option target="casino"/>
+		</Unit>
 		<Unit filename="C:/Users/finch/Desktop/Universidad/C C++/POO2021-1JJFA/casino/View/View.cpp">
 			<Option target="casino"/>
 		</Unit>

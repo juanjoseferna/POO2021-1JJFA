@@ -11,7 +11,7 @@
 
 
 enum PPT{ //PPT: Piedra, Papel y Tijera
-    PIEDRA = 1, PAPEL, TIJERA
+    PIEDRA, PAPEL, TIJERA
 };
 
 class PiedraPapelTijera : public Juego{

@@ -15,6 +15,7 @@ float Mayor13::jugar(float gonzosApostar) {
     cin >> opc;
     if ( opc == 1){
         gonzosResultado = gonzosApostar / 2;
+        cout << "Te devolvemos: " << gonzosApostar << endl;
         return gonzosResultado;
     } else {
         gonzosResultado = calcularResultado(gonzosApostar);
@@ -24,10 +25,13 @@ float Mayor13::jugar(float gonzosApostar) {
 
 
 float Mayor13::calcularResultado(float gonzosApostar) {
+    cout << "El numero del casino era: " << numeroCasino << endl;
     if ( numeroJugador <= numeroCasino ) {
+        cout << "Pierdes! perdiste " << gonzosApostar << endl;
         gonzosApostar = 0;
     } else {
         gonzosApostar = gonzosApostar * 2;
+        cout << "Ganaste! ganas " << gonzosApostar << endl;
     }
     return gonzosApostar;
 }

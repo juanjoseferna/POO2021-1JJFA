@@ -13,7 +13,6 @@ class AdivinoParesImpares : public Juego {
 protected:
     bool mayorCinco;
     bool par;
-    bool impar;
     virtual float calcularResultado(float gonzosApostar) override;
 public:
     virtual ~AdivinoParesImpares();
